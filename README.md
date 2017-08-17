@@ -11,7 +11,7 @@ tar zxf matio-X.Y.Z.tar.gz
 cd matio-X.Y.Z
 sudo sh ./configure
 make
-make check
+# make check
 sudo make install
 ```
 
