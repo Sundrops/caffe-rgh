@@ -60,7 +60,11 @@ void SegAccuracyLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
 
   /// bear revised.
   // remove old predictions if reset() flag is true
+  // layer_param_.seg_accuracy_param().reset() default: true
+  // every test img has own confusion_matrix_
   //if (this->layer_param_.seg_accuracy_param().reset()) {
+  //  confusion_matrix_.clear();
+  //}
   if (iter_ == 0) {
     confusion_matrix_.clear();
   }
