@@ -14,7 +14,10 @@ make
 # make check
 sudo make install
 ```
-
 # 编译
 - make -j32 (有可能出错, 若出错make clean后改成make -j16)
 - make pycaffe
+
+# 使用
+
+[在我们的数据集上训练(带光流)](https://github.com/Sundrops/caffe-rgh/tree/master/examples/train_our_dataset)
