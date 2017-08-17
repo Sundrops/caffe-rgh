@@ -1,0 +1,35 @@
+net: "train_1path.prototxt"
+
+### test 670 images
+### train 244 images
+### batch size 10.
+### 25 iters one epoch.
+### snapshot xx iters for x epoch.
+
+# make test net, but don't invoke it from the solver itself
+test_iter: 670
+test_interval: 250
+test_initialization: false
+
+display: 10
+
+#lr_policy: "step"
+lr_policy: "fixed"
+# lr for unnormalized softmax -- see train_val definition
+base_lr: 1e-08
+
+#lr_policy: "poly"
+#base_lr: 0.0001
+#power: 0.9
+
+
+#gamma: 0.1
+#stepsize: 24000
+
+# high momentum
+momentum: 0.9
+weight_decay: 0.0005
+
+max_iter: 25000 # 1000 epoch
+snapshot: 250
+snapshot_prefix: "models/train_1path/"
