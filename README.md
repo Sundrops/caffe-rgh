@@ -9,7 +9,7 @@
 ```sh
 tar zxf matio-X.Y.Z.tar.gz
 cd matio-X.Y.Z
-./configure
+sudo sh ./configure
 make
 make check
 make install
