@@ -12,7 +12,7 @@ cd matio-X.Y.Z
 sudo sh ./configure
 make
 make check
-make install
+sudo make install
 ```
 
 # 编译
