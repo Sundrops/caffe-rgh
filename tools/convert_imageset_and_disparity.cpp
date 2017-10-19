@@ -37,7 +37,7 @@
 #include "caffe/util/output.hpp"
 #include "thirdparty/CImg/CImg.h"
 using namespace cimg_library;
-
+#include <limits>
 #include <iostream>
 using namespace std;
 
@@ -155,7 +155,7 @@ public:
                     if(isnan(cv_disp.at<float>(y, x)))
                         value=std::numeric_limits<short>::max();
                     else
-                        value=cv_disp.at<float>(y, x)*32; 
+                        value=cv_disp.at<float>(y, x)*32;
                 }
 
                 *(ptr++)=*((unsigned char*)&value);
@@ -284,7 +284,7 @@ int main(int argc, char** argv) {
   }
 
   int arg_offset = 0;
-  
+
   std::ifstream infile(argv[arg_offset+1]);
   std::vector<ImagePair> lines;
   ImagePair pair;

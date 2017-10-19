@@ -35,7 +35,7 @@
 #include "caffe/proto/caffe.pb.h"
 #include "caffe/util/io.hpp"
 #include "caffe/util/output.hpp"
-
+#include <limits>
 #include <iostream>
 using namespace std;
 
@@ -142,9 +142,9 @@ public:
             {
                 if(isnan(flo_data[j]))
                     value=std::numeric_limits<short>::max();
-		    
+
                 else
-                    value=flo_data[j]*32; 
+                    value=flo_data[j]*32;
             }
 
             *(ptr++)=*((unsigned char*)&value);
@@ -299,7 +299,7 @@ int main(int argc, char** argv) {
   }
 
   int arg_offset = 0;
-  
+
   std::ifstream infile(argv[arg_offset+1]);
   std::vector<ImagePair> lines;
   ImagePair pair;
